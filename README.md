@@ -10,7 +10,9 @@ Nobody wants to live in a house where all the nails were driven by shoes.
 
 At the very least, though, besides the oft-ignored ravings of lovable fool, you'll find some shoe-hammered house Notebooks of our own, for example or reference, or learning or burning. Just, please, don't spread this disease. Write modules and packages and functions and classes! Save yourself! Leave this place!
 
+<div align="center">
 ![Thanks, I Hate It](./imgs/LOTR-Gandalf-FlyYouFools.gif)
+</div>
 
 ## Friends Don't Let Friends Use Jupyter Notebooks
 
@@ -26,16 +28,21 @@ This is a personal preference -- with _reasons_ -- so feel free to ignore us, bu
 
 Yes, this is an argument against Jupyter Notebooks by providing a repository of Jupyter Notebooks.
 
+<div align="center">
 ![Thanks, I Hate It](./imgs/Thanks-IHateIt.gif)
+</div>
 
 People say things like "don't touch that, it's hot!", but people still touch it, and people still get burned. And sometimes, people demand that you hand them burning hot coals and they assure you "No, no, it's fine, I got this!", and you don't wanna do it, but they're the people who've hired you to rake and heat-up the coals, so if you wanna keep gettin' paid, you gotta keep heatin' up the coals.
 
+<div align="center">
 ![Seinfeld, "I will never understand people."](./imgs/Seinfeld-Elaine-NeverUnderstandPeople.gif)
+</div>
 
 You can't make people make good choices. So yeah, this a repository of Jupyter Notebooks that's also an argument __against__ ever using Jupyter Notebooks. So let's just consider this to be oven mitts for handling the coals. In a perfect world, you wouldn't be handling hot coals for no reason, and thus you wouldn't need oven mitts. But it is what it is.
 
+<div align="center">
 ![The Irishman, "It is what it is."](./imgs/TheIrishman-Pesci-ItIsWhatItIs.gif)
-
+</div>
 
 ### Argument: The Combined View isn't _that_ Useful
 
@@ -63,8 +70,9 @@ Didn't you write this Notebook to try and provide something simpler and easier t
 
 Or was it just kinda slightly more convenient for you ... even though it needs a special runtime, doesn't really work with most text-editors or IDEs, and requires you to write all your code in basically a single stream-of-consciousness explicit mess of script statements without the benefits of custom classes or functions?
 
+<div align="center">
 ![Star Trek: The Next Generation, "I hate this!"](./imgs/StarTrek-NextGeneration-Data-HateThis.gif)
-
+</div>
 
 ### Argument: The Runtime Kernel is a Death Trap
 
@@ -140,7 +148,9 @@ So, wait, doesn't this all mean that the convenience of a Notebook relies on you
 
 So what, again, is the benefit of a Notebook?!
 
+<div align="center">
 ![Star Trek: The Next Generation, "I hate this!"](./imgs/StarTrek-NextGeneration-Data-HateThis.gif)
+</div>
 
 ### In Summary: Don't Do It
 
@@ -156,4 +166,6 @@ Would you really, actually, truly consider this "productionalised"?
 
 Just don't do it. That's our advice. Feel free to ignore us, of course. We're just one person, and people usually don't listen to us anyways.
 
+<div align="center">
 ![Seinfeld, "I don't like this thing!"](./imgs/Seinfeld-Elaine-IDontLikeThisThing.gif)
+</div>
