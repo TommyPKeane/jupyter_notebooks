@@ -4,6 +4,11 @@ A repository of -- 🤮🤮🤮 -- Jupyter (iPython) Notebooks.
 
 Look if you must. Use if you ___must___. But if you're not being forced by financial holds, job security, or threats of violence (physical, emotional, or psychological), then please please please leave this place and never return.
 
+- [Friends Don't Let Friends Use Jupyter Notebooks](#friends-dont-let-friends-use-jupyter-notebooks)
+- [Argument: The Combined View isn't _that_ Useful](#argument-the-combined-view-isnt-that-useful)
+- [Argument: The Runtime Kernel is a Death Trap](#argument-the-runtime-kernel-is-a-death-trap)
+- [In Summary: Don't Do It](#in-summary-dont-do-it)
+
 If you're offended by our rants and ravings; we apologise. We mean no offense, only warning. Jupyter (iPython) Notebooks are _not_ how you write good, reliable, robust software, and they are _not_ going to help you anywhere near as much as you think in R&D. Maaaaaybe they're ok for prototyping, but that's like saying maybe a shoe is ok as a hammer.
 
 Nobody wants to live in a house where all the nails were driven by shoes.
