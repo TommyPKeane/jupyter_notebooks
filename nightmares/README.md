@@ -10,7 +10,7 @@ There be dragons, here.
 
 </div>
 
-These Notebooks are some of the worst examples we could think of, to show what can go terribly terrible wrong when writing Notebooks. For the sake of everyone's education, these are as terse as possible and get right at the heart of the failures, bugs, and confusions that abound. Do __not__ use these Notebooks as references for any of your development, and do __not__ try to suss out any convenient _tricks_ from them.
+These Notebooks are some of the worst examples we could think of, to show what can go terribly, terribly wrong when writing Notebooks. For the sake of everyone's education, these are as terse as possible and get right at the heart of the failures, bugs, and confusions that abound. Do __not__ use these Notebooks as references for any of your development, and do __not__ try to suss out any convenient _tricks_ from them.
 
 <div align="center">
   
@@ -22,7 +22,7 @@ These Notebooks are some of the worst examples we could think of, to show what c
 
 If these are all terrible things to do, then why even have them written out?
 
-Well, like most things in life, we learn by failure or abject terror.
+Well, like most things in life, we really only ever learn from overt failure and abject terror.
 
 We've created these terrible "nightmare" Notebooks to point out what can go horribly wrong and what you shouldn't do. While elsewhere in this repository we have tolerably "good" Notebooks -- as "good" as any Notebook _can_ be -- there's really no "good" without the "bad".
 
