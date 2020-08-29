@@ -80,7 +80,7 @@ Or was it just kinda slightly more convenient for you ... even though it needs a
 
 <div align="center">
 
-![Star Trek: The Next Generation, "I hate this!"](./imgs/StarTrek-NextGeneration-Data-HateThis.gif)
+![Star Trek: The Next Generation, "I hate this!"](./imgs/StarTrek-NextGeneration-Data-HateThis.gif =300x)
 
 </div>
 
