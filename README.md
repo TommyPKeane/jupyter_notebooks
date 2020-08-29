@@ -6,7 +6,7 @@ Look if you must. Use if you ___must___. But if you're not being forced by finan
 
 If you're offended by our rants and ravings; we apologise. We mean no offense, only warning. Jupyter (iPython) Notebooks are _not_ how you write good, reliable, robust software, and they are _not_ going to help you anywhere near as much as you think in R&D. Maaaaaybe they're ok for prototyping, but that's like saying maybe a shoe is ok as a hammer.
 
-Nobody wants to live in a house where all the nails were hit with shoes instead of hammers.
+Nobody wants to live in a house where all the nails were driven by shoes.
 
 At the very least, though, besides the oft-ignored ravings of lovable fool, you'll find some shoe-hammered house Notebooks of our own, for example or reference, or learning or burning. Just, please, don't spread this disease. Write modules and packages and functions and classes! Save yourself! Leave this place!
 
@@ -16,8 +16,8 @@ At the very least, though, besides the oft-ignored ravings of lovable fool, you'
 
 This is a personal preference -- with _reasons_ -- so feel free to ignore us, but we _strongly_ suggest that you __do not__ use __Jupyter Notebooks__ for Python development. The quick list of reasons are:
 
-- Notebook code is stored in JSON files that horrendous to read and `diff`.
-- Notebooks need an HTML Generator ("renderer") to view them "properly", and a specialised runtime HTML editor to modify them "properly".
+- Notebook code is stored in JSON files that are horrendous to read and `diff`.
+- Notebooks need an HTML Generator ("renderer") to view them "properly", and a specialised runtime HTML editor to modify them "properly" -- yes, this is all packaged up with the `jupyter-labs` runtime and a Web-browser, but the fact still remains that you need them both.
 - Printing Notebooks to PDF or HTML files is not always optimal and can be very difficult to "clean up".
 - Notebook scripting encourages "worst practices" Python development as custom packages are not as easily imported.
 - Notebooks run with a single "kernel" (Python Interpreter) instance that requires a manual restart, otherwise it will remain persistent. This also means that all memory and aliasing will be persistent for the runtime of the "kernel", which can quickly lead to silent or overtly-confusing bugs.
@@ -78,9 +78,13 @@ Due to Python's aliasing and shallow-copy memory-management, this means you can 
 
 _And worse!_, this means that you can also get silent failures (bugs) in your code due to implicit aliasing; where you won't be able to see these errors unless the effects are obvious.
 
-For Data Science, Statistics, Mathematics, Engineering, and Machine Learning, this is a little more than _kind of_ a worst-case-scenario.
+For Data Science, Statistics, Mathematics, Engineering, and Machine Learning, this is a little more than just ___"kind of"___ a worst-case-scenario.
 
-If your code isn't doing what you think its doing, especially if you're seeing your results for the first time and have no means of gauging correctness, you could end up with totally wrong expectations, results, or interpretations. Imagine a realistic scenario of spending hours tweaking a Machine Learning model in a cell in a Notebook, and finally getting things working, embedding an intuitive understanding of the design in your mind. Then the next day you restart the Jupyter "kernel" and run through all the cells in order to get back to what you were doing, and now everything is broken!? What happened!? Well, if you reused an alias and had run certain cells out of order, you could've spent hours optimising a model based on your raw, untransformed data instead of your feature-ready transformed-data. Since this was your first time tweaking and optimising your model, and since you don't have all the data memorised, there was no way for you to know until you shutdown everything, re-ran it all, and came out with a totally different result!
+If your code isn't doing what you think its doing, especially if you're seeing your results for the first time and have no means of gauging correctness, you could end up with totally wrong expectations, results, or interpretations.
+
+Imagine a realistic scenario of spending hours tweaking a Machine Learning model in a cell in a Notebook, and finally getting things working, embedding an intuitive understanding of the design in your mind. Then the next day you restart the Jupyter "kernel" and run through all the cells in order to get back to what you were doing, and now everything is broken!? What happened!?
+
+Well, if you reused an alias and had run certain cells out of order, you could've spent hours optimising a model based on your raw, untransformed data instead of your feature-ready transformed-data. Since this was your first time tweaking and optimising your model, and since you don't have all the data memorised, there was no way for you to know until you shutdown everything, re-ran it all, and came out with a totally different result!
 
 Now imagine that that process has some kind of embedded stochastic aspect to it, such that every time you run through the algorithm it's just a little bit different. How can you tell the difference between a bug and the naturally random nature?
 
@@ -124,7 +128,9 @@ Imagine the above code isn't so sequential but is now split across cells that wh
 
 The computer's gonna let you do whatever you wanna do and it's only gonna do what you told it. But if you didn't know what you told it, or you accidentally said some things out of order, nothing's gonna stop you from continuing along that path, unaware of the consequences until you (hopefully) decide to shutdown and run everything (in order) from scratch.
 
-In normal Python development, when you call `python -m my_pkg.my_module` or `python ./my_module.py` you're calling the interpreter once. If it errors out or fails, it stops. If it succeeds, it stops. When you call your code again, the interpreter runs again. `python` is the interpreter, that's the "kernel". If you get an error in a Jupyter notebook, it'll tell you, but it might not stop the "kernel". You can actually "correct" errors without restarting the "kernel", depending on how bad the error is or not. But then what about all those aliases? Are they gone? Did you overwrite them?
+In normal Python development, when you call `python -m my_pkg.my_module` or `python ./my_module.py` you're calling the interpreter once. If it errors out or fails, it stops. If it succeeds, it stops. When you call your code again, the interpreter runs again. `python` is the interpreter, that's the "kernel", and it only ever runs once.
+
+If you get an error in a Jupyter Notebook, it'll tell you, but it might __not__ stop the "kernel". You can actually "correct" errors without restarting the "kernel", depending on how bad the error is or not. But then what about all those aliases? Are they gone? Did you overwrite them?
 
 What if you wrote your code and created 10 new aliases, but it fails and the "kernel" keeps running, so now 9 of the 10 aliases are in memory, but the 10th one failed so it didn't get created. Now you go back, look at your code, find the bug, and rewrite that cell, but this time you only need 4 aliases. The 10th one never got created, but you have 5 aliases that were created that you now deleted from your Notebook. Are they gone? Nope! There's a pretty good chance they're just sitting there in the "kernel", and you can still reference them, even though they're not declared anywhere in your current code.
 
@@ -140,11 +146,11 @@ So what, again, is the benefit of a Notebook?!
 
 Just to summarise: don't use Jupyter (iPython) Notebooks ... unless someone forces you to.
 
-Even then, try and convince them that it's not gonna be helpful. Yeah, maybe it's slightly faster, but really you're creating twice as much work because now you have to rewrite the notebook into Python modules to actually be able to use it in any kind of production environment.
+Even then, try and convince them that it's not gonna be helpful. Yeah, maybe it's slightly faster to "whip up a prototype", but really you're creating twice as much work because now you have to rewrite the notebook into Python modules to actually be able to use it in any kind of production environment. And there's no guarantee that something that worked in your Notebook will work in production, because it's all out of context!
 
 Ok, ok, we'll concede slightly again, that, yes, there are things like AWS [SageMaker Notebooks](https://aws.amazon.com/sagemaker/) and GCP [AI Platform Notebooks](https://cloud.google.com/ai-platform-notebooks) that use Python notebooks and allow you to run production-like Data Science R&D ... but do they really?
 
-Is your DevOps team or Backend Engineering Team really really excited about figuring out how to integrate these notebooks into the production workflow? How often are you running these notebooks? How clean is the code? How well tested? Are there unit-tests? functional tests? integration tests? Do they have to read-in all the data every time they run? How costly are they to run? How much are the data input/output costs?
+Is your DevOps team or Backend Engineering Team really _actually_ excited about figuring out how to integrate these notebooks into the production workflow? How often are you running these notebooks? How clean is the code? How well tested? Are there unit-tests? functional tests? integration tests? Do they have to read-in all the data every time they run? How costly are they to run? How much are the data input/output costs? How fast do they run? Can you optimise them? Are you reusing code that's used elsewhere in production or have you copy-pasted code from production repos? How many new bugs have you created? How many old bugs are left unresolved? How do you sleep at night?!
 
 Would you really, actually, truly consider this "productionalised"?
 
